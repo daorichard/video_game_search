@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -26,6 +27,10 @@ module.exports = {
         loader: 'url-loader',
         options: { limit: false },
       },
+      {
+        test: /\.(ico)$/,
+        use: 'file-loader?name=assets/[name].[ext]',
+      },
     ],
   },
   resolve: {
@@ -38,12 +43,15 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Development',
       template: 'index.html',
+      favicon: 'favicon.ico',
+    }),
+    new CopyWebpackPlugin({
+      patterns: [{ from: 'favicon.ico', to: 'favicon.ico' }],
     }),
   ],
   devServer: {
     static: {
-      directory: path.join(__dirname, 'client'),
-      publicPath: '/build',
+      directory: path.join(__dirname, 'build'),
     },
     proxy: {
       '/api/': 'http://localhost:3000',

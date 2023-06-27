@@ -5,7 +5,7 @@ function App() {
     <div>
       <h1>Welcome Richard!</h1>
       <h1>sup bro</h1>
-      <div>hellofa</div>
+      <div>hhey man</div>
     </div>
   );
 }
