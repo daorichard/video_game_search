@@ -29,8 +29,7 @@ const lastYear = `${currentYear - 1}-${currentMonth}-${currentDay}`;
 const nextYear = `${currentYear + 1}-${currentMonth}-${currentDay}`;
 
 // Popular Games, sort from last year to this year, sort by rating, get 10 results
-const popular_games = `games?dates=${lastYear},${currentDate}&ordering=-rating&page_size=10`;
-
+const popular_games = `games?dates=${lastYear},${currentDate}&ordering=-rating&page_size=10&key=${process.env.API_KEY}`;
 // final looking url
 
 export const popularGamesUrl = () => `${base_url}${popular_games}`;

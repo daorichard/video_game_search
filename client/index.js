@@ -2,9 +2,16 @@ import React from 'react';
 import { render } from 'react-dom';
 import { createRoot } from 'react-dom/client';
 import App from '@components/App';
-
-// uncomment so that webpack can bundle styles
+import { Provider } from 'react-redux';
 import styles from './scss/application.scss';
+import store from './reducers/store';
+
+// react render
 const container = document.getElementById('root');
 const root = createRoot(container);
-root.render(<App />);
+
+root.render(
+  <Provider store={store}>
+    <App />
+  </Provider>
+);
