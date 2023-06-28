@@ -1,7 +1,8 @@
 h1 {
-  color: red;
+  color: white;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -9,4 +10,9 @@ h1 {
   outline: none;
   border: none;
   text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: #2e3235;
 }
