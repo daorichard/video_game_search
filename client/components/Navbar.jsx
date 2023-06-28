@@ -1,7 +1,12 @@
-import React from 'react';
-import { popularGamesUrl } from './api.js';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { getGameData } from '../actions/actions';
 function Navbar() {
-  console.log(popularGamesUrl());
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getGameData());
+  });
+
   return <div>Navbar</div>;
 }
 
