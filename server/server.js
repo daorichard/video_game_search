@@ -9,6 +9,10 @@ app.get('/', (req, res) => {
   return res.status(200).sendFile(path.join(__dirname, '../index.html'));
 });
 
+app.get('/hello', (req, res) => {
+  return res.status(200).json('heasdfasdfllo');
+});
+
 app.listen(3000, () => {
   console.log('Express listening on port 3000');
 }); //listens on port 3000 -> http://localhost:3000/

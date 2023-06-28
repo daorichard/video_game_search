@@ -1,7 +1,8 @@
 import React from 'react';
-
+import { popularGamesUrl } from './api.mjs';
 function Navbar() {
-  return <div>Navbar</div>;
+  console.log(popularGamesUrl());
+  return <div>Navba assadfsfsr</div>;
 }
 
 export default Navbar;
