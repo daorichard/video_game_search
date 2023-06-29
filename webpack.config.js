@@ -55,6 +55,7 @@ module.exports = {
     static: {
       directory: path.join(__dirname, 'build'),
     },
+    historyApiFallback: true, // Enable history API fallback
     proxy: {
       '/api/': 'http://localhost:3000',
     },

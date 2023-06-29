@@ -7,10 +7,10 @@ import { loadDetail } from '../actions/detailActions';
 import { Link } from 'react-router-dom';
 
 function GameCard({ name, released, image, id, shortScreenshots }) {
-  // LOAD DETAILS
   const dispatch = useDispatch();
   // GETTING THE ID -- USE THIS FOR GENRES LATER
   const loadDetailHandler = () => {
+    document.body.style.overflow = 'hidden';
     dispatch(loadDetail(id, shortScreenshots));
   };
   return (
@@ -25,12 +25,15 @@ function GameCard({ name, released, image, id, shortScreenshots }) {
 }
 
 const StyledGame = styled(motion.div)`
-  /* background-color: blue; */
   min-height: 30vh;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
   text-align: center;
   border-radius: 1rem;
   cursor: pointer;
+  overflow: hidden;
+  p {
+    color: #6a6868;
+  }
   img {
     width: 100%;
     height: 40vh;
