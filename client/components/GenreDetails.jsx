@@ -73,6 +73,7 @@ const Card = styled.div`
   min-height: 25rem;
   margin-bottom: 2rem;
   position: relative;
+
   /* margin-right: 1rem; */
   transition: transform 0.3s ease-in-out;
 
