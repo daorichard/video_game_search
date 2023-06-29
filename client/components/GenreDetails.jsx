@@ -25,7 +25,6 @@ function GenreDetails() {
       const data = await response.json();
       localStorage.setItem('genre', JSON.stringify(data.results));
       setGenre(data.results);
-      console.log(data);
     }
   };
 

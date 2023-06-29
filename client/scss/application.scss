@@ -1,8 +1,6 @@
-h1 {
-  color: white;
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Poppins:wght@100&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -10,11 +8,33 @@ h1 {
   outline: none;
   border: none;
   text-decoration: none;
-  font-family: 'Montserrat', sans-serif;
 }
 
-body {
-  background-color: white;
+html {
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+  }
+  body {
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 3rem;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+    font-weight: bolder;
+    color: black;
+    padding: 1.2rem;
+  }
 }
 
 // fix cards

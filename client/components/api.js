@@ -38,3 +38,11 @@ const newGames = `games?&key=${process.env.API_KEY}&dates=${lastYear},${currentD
 export const newGamesUrl = () => `${base_url}${newGames}`;
 export const popularGamesUrl = () => `${base_url}${popular_games}`;
 export const upcoming_gamesUrl = () => `${base_url}${upcoming_games}`;
+
+// GAME DETAILS
+export const gameDetailsUrl = (game_id) =>
+  `${base_url}games/${game_id}?&key=${process.env.API_KEY}`;
+
+// GAME SCREENSHOTS
+export const gameSSUrl = (game_id) =>
+  `${base_url}games/${game_id}/screenshots?&key=${process.env.API_KEY}`;
