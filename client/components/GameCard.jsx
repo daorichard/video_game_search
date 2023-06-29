@@ -15,7 +15,7 @@ function GameCard({ name, released, image, id, shortScreenshots }) {
   return (
     <StyledGame onClick={loadDetailHandler}>
       <h3>{name}</h3>
-      <p>{released}</p>
+      <p>Release Date: {released}</p>
       <img src={image} alt={name} />
     </StyledGame>
   );

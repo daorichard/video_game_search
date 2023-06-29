@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { getGameData } from '../actions/actions';
+import React from 'react';
+import styled from 'styled-components';
 
 function Navbar() {
-  return <div>Navbar</div>;
+  return <nav className='nav'>Navbar</nav>;
 }
+
+const NavContainer = styled.nav``;
 
 export default Navbar;
