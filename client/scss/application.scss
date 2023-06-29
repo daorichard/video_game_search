@@ -17,6 +17,9 @@ html {
   &::-webkit-scrollbar-thumb {
     background-color: darkgrey;
   }
+  &::-webkit-scrollbar-track {
+    background: white;
+  }
   body {
     background-color: white;
     font-family: 'Montserrat', sans-serif;
@@ -33,7 +36,7 @@ html {
     font-size: 1.3rem;
     font-weight: bolder;
     color: black;
-    padding: 1.2rem;
+    padding: 1.2rem 0rem;
   }
 }
 

@@ -7,10 +7,14 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import GameCard from '../components/GameCard';
 import GameDetail from '../components/GameDetail';
+import { useLocation } from 'react-router-dom';
 
 function Home() {
-  const dispatch = useDispatch();
+  // get the current location
+  const location = useLocation();
+  const pathId = location.pathname.split('/')[2];
 
+  const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getGameData());
   }, []);
@@ -22,7 +26,7 @@ function Home() {
     <div>
       <Navbar />
       <GameList>
-        <GameDetail />
+        {pathId && <GameDetail />}
         <h2>Upcoming Games</h2>
         <Games>
           {upcoming.map((game) => (

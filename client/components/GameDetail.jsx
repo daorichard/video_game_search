@@ -45,12 +45,13 @@ function GameDetail() {
 }
 
 const CardShadow = styled(motion.div)`
-  width: 100%;
+  width: 85%;
   min-height: 100vh;
   overflow-y: scroll;
   background: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
+  left: 0;
   &::-webkit-scrollbar-thumb {
     background-color: #ff7676;
     width: 0.5rem;
