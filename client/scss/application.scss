@@ -14,5 +14,10 @@ h1 {
 }
 
 body {
-  background-color: #2e3235;
+  background-color: white;
+}
+
+// fix cards
+.splide__list {
+  align-items: center;
 }
