@@ -79,6 +79,7 @@ const Detail = styled(motion.div)`
   width: 80%;
   border-radius: 1rem;
   padding: 2rem 5rem;
+  /* change below for adjusting */
   background: white;
   position: absolute;
   left: 10%;

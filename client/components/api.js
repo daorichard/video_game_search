@@ -46,3 +46,7 @@ export const gameDetailsUrl = (game_id) =>
 // GAME SCREENSHOTS
 export const gameSSUrl = (game_id) =>
   `${base_url}games/${game_id}/screenshots?&key=${process.env.API_KEY}`;
+
+// SEARCHED GAME
+export const searchUrl = (game_name) =>
+  `${base_url}games?search=${game_name}&key=${process.env.API_KEY}&ordering=-metacritic&page_size=10`;

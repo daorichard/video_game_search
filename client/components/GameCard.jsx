@@ -25,6 +25,8 @@ function GameCard({ name, released, image, id, shortScreenshots }) {
 }
 
 const StyledGame = styled(motion.div)`
+  /* change below to set cards colors */
+  /* background-color: blue; */
   min-height: 30vh;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
   text-align: center;
