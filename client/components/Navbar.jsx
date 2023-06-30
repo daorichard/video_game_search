@@ -5,7 +5,7 @@ function Navbar() {
   return (
     <NavContainer>
       <a href='/' className='site-title'>
-        Steam at Home
+        Steam at Home lol
       </a>
       <ul>
         <li>

@@ -1,23 +1,34 @@
 import React from 'react';
 import styled from 'styled-components';
 import { AiOutlineSearch } from 'react-icons/ai';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { searchUrl } from './api';
 import axios from 'axios';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { fetchSearch } from '../actions/actions';
 
 function Searchbar() {
   const [searchValue, setSearchValue] = useState('');
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setSearchValue(e.target.value);
   };
 
   // our handle submit is going to dispatch data of game
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(searchValue);
+    dispatch(fetchSearch(searchValue));
+    // navigate to results page to render game components
+    // navigate('/results');
+    await new Promise((resolve) => {
+      setTimeout(resolve, 400); // Adjust the delay if needed
+    });
+
+    navigate('/results');
     setSearchValue('');
   };
 
