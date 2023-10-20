@@ -25,4 +25,4 @@
 - Clone the repo and run `npm install` and then `npm run dev` to boot up the project in development mode
 
 ## Live Demo:
-[Live Demo](https://daorichard.github.io/video_game_search/)https://daorichard.github.io/video_game_search/)
+[Demo](https://daorichard.github.io/video_game_search/)
